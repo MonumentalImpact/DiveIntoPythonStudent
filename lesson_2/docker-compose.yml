@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+  student_app:
+    container_name: student_app
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/home/student
+    working_dir: /home/student
+    command: /usr/local/bin/python main.py

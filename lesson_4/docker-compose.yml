@@ -1,0 +1,24 @@
+---
+version: '3'
+services:
+  database:
+    image: 'mongo:4.2.21'
+    ports:
+      - 8081:8081
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: student
+      MONGO_INITDB_ROOT_PASSWORD: student
+
+    volumes:
+      - ./.db_data/:/data/db
+  tweeter:
+    depends_on:
+      - database
+    container_name: tweeter
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/home/student
+    working_dir: /hom/student
+    command: /usr/local/bin/python app.py

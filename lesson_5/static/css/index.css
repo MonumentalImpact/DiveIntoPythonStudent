@@ -1,0 +1,10 @@
+#messages {
+    outline-style: solid;
+    outline-color: #663300;
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+}
