@@ -1,4 +1,3 @@
-import flask
 import pymongo
 
 from app import app
