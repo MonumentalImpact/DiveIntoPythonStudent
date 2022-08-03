@@ -1,6 +1,3 @@
-from time import time
-from os import urandom
-
 import flask
 import pymongo
 
