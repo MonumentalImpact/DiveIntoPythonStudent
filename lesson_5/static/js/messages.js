@@ -12,7 +12,7 @@ async function messageSendCallback() {
         },
         method: "POST",
         body: JSON.stringify({ author: nickname.value, content: content.value })
-    }).then(content.value = "S").then(populateMessages())
+    }).then(content.value = "").then(populateMessages())
 }
 
 async function populateMessages() {
@@ -40,7 +40,7 @@ async function populateMessages() {
     }
 }
 
-window.onload = function () {
+window.onload = function() {
     populateMessages();
     document.getElementById("message-button").addEventListener("click", messageSendCallback);
 }
