@@ -10,4 +10,4 @@ def hello():
     pass
 
 
-app.run("localhost", 8080)
+app.run(port=80)
